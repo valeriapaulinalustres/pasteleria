@@ -1,0 +1,32 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-menu{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-contact{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.footer-icon-socialMedia{
+    width: 30px;
+    height: 30px;
+}
