@@ -6,10 +6,13 @@ import { NavLink } from 'react-router-dom';
 function NavBar() {
   return (
     <div className='navBar-container'>
-      <nav className='nav-brand'>
+      
+        <NavLink to="/" className='nav-brand'>
         <p>logo</p>
         <h1>Mi Pastelería</h1>
-      </nav>
+        </NavLink>
+        
+      
       <nav className='nav-menu'>
         <NavLink to="/" className="nav-links">Home</NavLink>
         <NavLink to="/about" className="nav-links">About</NavLink>

@@ -13,7 +13,7 @@ function Footer() {
         <div className='footer'>
 <div className='footer-container'>
             <div>
-                <h2>Company</h2>
+                <h5>Company</h5>
                 <nav className='footer-menu'>
                     <NavLink to="/" className="nav-links">Home</NavLink>
                     <NavLink to="/about" className="nav-links">About</NavLink>
@@ -24,7 +24,7 @@ function Footer() {
 
             </div>
             <div>
-                <h2>Contacto</h2>
+                <h5>Contacto</h5>
                 <div className='footer-contact'>
                     <FaMapMarkerAlt className='footer-icon' />
                     <p>dirección</p>
@@ -45,7 +45,7 @@ function Footer() {
 
             </div>
             <div>
-                <h2>Abierto</h2>
+                <h5>Abierto</h5>
                 <p>Martes - Viernes</p>
                 <p>15 a 20 hs</p>
                 <p>Sábados y Domingos</p>
@@ -53,9 +53,8 @@ function Footer() {
 
             </div>
             <div>
-                <h2>Escribinos</h2>
-                <a href="https://wa.me/5491160127926/?text=Hola%20Mi%20Pastelería" target="_blank"
-                ><button><BsWhatsapp /></button></a>
+                <h5>Escribinos</h5>
+                <a href="https://wa.me/5491160127926/?text=Hola%20Mi%20Pastelería" target="_blank"><button><BsWhatsapp /></button></a>
             </div>
         </div>
         <p>© Mi Pastelería, All Right Reserved.</p>
