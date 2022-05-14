@@ -7,6 +7,7 @@ import { IoMdMail } from 'react-icons/io';
 import { RiFacebookCircleLine } from 'react-icons/ri';
 import { RiInstagramLine } from 'react-icons/ri';
 import { BsWhatsapp } from 'react-icons/bs';
+import Wa from '../Wa/Wa'
 
 function Footer() {
     return (
@@ -16,10 +17,10 @@ function Footer() {
                 <h5>Company</h5>
                 <nav className='footer-menu'>
                     <NavLink to="/" className="nav-links">Home</NavLink>
-                    <NavLink to="/about" className="nav-links">About</NavLink>
-                    <NavLink to="/service" className="nav-links">Service</NavLink>
-                    <NavLink to="/menu" className="nav-links">Menu</NavLink>
-                    <NavLink to="/contact" className="nav-links">Contact</NavLink>
+                    <NavLink to="/about" className="nav-links">Nosotras</NavLink>
+                    <NavLink to="/service" className="nav-links">Servicios</NavLink>
+                    <NavLink to="/menu" className="nav-links">Productos</NavLink>
+                    <NavLink to="/contact" className="nav-links">Contacto</NavLink>
                 </nav>
 
             </div>
@@ -27,16 +28,16 @@ function Footer() {
                 <h5>Contacto</h5>
                 <div className='footer-contact'>
                     <FaMapMarkerAlt className='footer-icon' />
-                    <p>dirección</p>
+                    <p className='footer-text' >dirección</p>
                 </div>
                 <div className='footer-contact'>
                     <BsFillTelephoneFill className='footer-icon' />
-                    <p>11 60127926</p>
+                    <p className='footer-text' >11 60127926</p>
 
                 </div>
                 <div className='footer-contact'>
                     <IoMdMail className='footer-icon' />
-                    <p>cjdemattia@yahoo.com.ar</p>
+                    <p className='footer-text' >cjdemattia@yahoo.com.ar</p>
                 </div>
                 <div className='footer-contact'>
                     <RiFacebookCircleLine className='footer-icon-socialMedia' />
@@ -46,18 +47,19 @@ function Footer() {
             </div>
             <div>
                 <h5>Abierto</h5>
-                <p>Martes - Viernes</p>
-                <p>15 a 20 hs</p>
-                <p>Sábados y Domingos</p>
-                <p>11 a 19 hs</p>
+                <p className='footer-text' >Martes - Viernes</p>
+                <p className='footer-text' >15 a 20 hs</p>
+                <p className='footer-text' >Sábados y Domingos</p>
+                <p className='footer-text' >11 a 19 hs</p>
 
             </div>
             <div>
                 <h5>Escribinos</h5>
-                <a href="https://wa.me/5491160127926/?text=Hola%20Mi%20Pastelería" target="_blank"><button><BsWhatsapp /></button></a>
+                <Wa />
+            
             </div>
         </div>
-        <p>© Mi Pastelería, All Right Reserved.</p>
+        <p className='copyright'>© Mi Pastelería, All Right Reserved.</p>
         </div>
         
     )

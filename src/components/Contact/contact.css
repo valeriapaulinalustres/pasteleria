@@ -1,0 +1,39 @@
+.contact-text-subtitle{
+    text-align: center;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-text-body{
+    font-family:  'Heebo', sans-serif;
+    color: var(--negro);
+}
+.contact-icon{
+    width: 25px;
+    height: 25px;
+    color: var(--negro);
+    margin-right: 5px;
+}
+.contact-contacts{
+    display: flex;
+    flex-direction: row;
+}
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+}
+.contact-icons-text{
+    display: flex;
+    flex-direction: row;
+}
+.contact-text{
+    display: flex;
+    flex-direction: row;
+}
+.map{
+    width: 500px;
+    height: 500px;
+}

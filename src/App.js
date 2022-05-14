@@ -8,12 +8,14 @@ import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Error from './components/Error/Error';
 import Footer from './components/Footer/Footer';
+import { WaProvider } from './context/WaContext';
 
 
 
 function App() {
   return (
     <div>
+      <WaProvider>
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -24,6 +26,8 @@ function App() {
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
+      </WaProvider>
+      
     </div>
 
   )

@@ -22,11 +22,26 @@
 }
 
 .footer-icon{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    margin-right: 5px;
+}
+.footer-icon-socialMedia{
+    width: 40px;
+    height: 40px;
+    color: white;
 }
 
-.footer-icon-socialMedia{
-    width: 30px;
-    height: 30px;
+.footer-text{
+    font-family:  'Heebo', sans-serif;
+    color: white;
+    
+}
+.copyright{
+    font-family:  'Heebo', sans-serif;
+    color: var(--negro);
+    text-align: center;
+    border-top: 1px solid black;
+    padding-top: 5px;
 }
