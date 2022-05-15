@@ -12,7 +12,7 @@ const WaProvider = ({ children }) => {
   };
   
   const onLeave = ({ currentTarget }) => {
-    gsap.to(currentTarget, { backgroundColor: "#DA0037", scale: 1 });
+    gsap.to(currentTarget, { backgroundColor: "#DA0037", scale: 2 });
   };
 
 

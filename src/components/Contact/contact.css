@@ -1,15 +1,18 @@
 .contact-text-subtitle{
     text-align: center;
+    margin: 20px 0px;
 }
 
 .contact-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 30px 10px;
 }
 .contact-text-body{
     font-family:  'Heebo', sans-serif;
     color: var(--negro);
+   font-size: 20px;
 }
 .contact-icon{
     width: 25px;
@@ -20,10 +23,16 @@
 .contact-contacts{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    
+
+   
 }
-.footer-contact{
-    display: flex;
-    flex-direction: column;
+.contact{
+display: flex;
+flex-direction: column;
+margin: 30px;
 }
 .contact-icons-text{
     display: flex;
@@ -36,4 +45,7 @@
 .map{
     width: 500px;
     height: 500px;
+}
+.map-container{
+    margin-top: 200px;
 }

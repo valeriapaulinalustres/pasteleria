@@ -7,6 +7,11 @@
 
 }
 
+body{
+  margin: 0;
+  padding: 0;
+}
+
 h1{
   font-family: 'Nunito', sans-serif;
   font-size: 40px;
@@ -26,6 +31,7 @@ h2{
     height: 150px;
     padding-top: 30px;
     font-weight: 900;
+    margin: 0;
 
 
 }
@@ -35,7 +41,7 @@ h3{
   font-size: 3em;
   color: var(--negro);
   font-weight: 900;
-
+margin: 0;
    
 
 }
@@ -44,6 +50,7 @@ h4{
   font-family: 'Pacifico', cursive;
   font-size: 2em;
   color: var(--rojo);
+  margin: 0;
  
 
 }
@@ -53,6 +60,7 @@ h5{
   font-size: 1.5em;
   color: var(--rojo-marca);
   font-weight: 100;
+  margin: 0;
 }
 .text-center{
   text-align: center;
@@ -61,7 +69,7 @@ h5{
 .paragraph{
   font-family: 'Heebo', sans-serif;
 color: var(--gris);
-font-size: 2em;
+font-size: 1.5em;
 }
 
 
