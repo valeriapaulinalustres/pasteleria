@@ -40,7 +40,7 @@ function Contact() {
   };
 
   // checking to see when the vieport is visible to the user
-  intersection && intersection.intersectionRatio < 0.2
+  intersection && intersection.intersectionRatio < 0.5
     ? fadeOut(".fadeIn")
     : fadeIn(".fadeIn");
 
