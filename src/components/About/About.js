@@ -176,14 +176,15 @@ intersection && intersection.intersectionRatio < 0.5
         </div>
 
       </section>
-      <section className='about-team fadeIn' ref={sectionRefAbout}>
-        <h4 className='text-center'>El equipo</h4>
-        <h3 className='text-center'>Nuestras pasteleras</h3>
+
+      <section className='about-team ' ref={sectionRefAbout}>
+        <h4 className='text-center fadeIn'>El equipo</h4>
+        <h3 className='text-center fadeIn'>Nuestras pasteleras</h3>
         <div className='about-team-img'>
-          <div className='container-img-chef' onMouseEnter={onEnterChef} onMouseLeave={onLeaveChef} >
+          <div className='container-img-chef fadeIn' onMouseEnter={onEnterChef} onMouseLeave={onLeaveChef} >
           <img src="https://media.istockphoto.com/photos/young-beautiful-smiling-woman-chef-with-arms-crossed-at-kitchen-picture-id1298088270?b=1&k=20&m=1298088270&s=170667a&w=0&h=uHmRibes_rtOLmzFECXfGxSgo_OzLbX2rl9PWNaU5AE=" alt="pastelera" className='crop'  />
           </div>
-          <div className='container-img-chef' onMouseEnter={onEnterChef} onMouseLeave={onLeaveChef}>
+          <div className='container-img-chef fadeIn' onMouseEnter={onEnterChef} onMouseLeave={onLeaveChef}>
           <img src="https://media.istockphoto.com/photos/woman-decorating-the-pink-cake-she-has-prepared-picture-id1343850183?b=1&k=20&m=1343850183&s=170667a&w=0&h=x73Rp7WXxL6hcT7Gb6iKGm67t2xB-TpCzIPCm84lc-M=" alt="pastelera" className='crop' />
           </div>
          
