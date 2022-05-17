@@ -1,0 +1,8 @@
+.menu-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  margin: 60px;
+}

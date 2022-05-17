@@ -19,7 +19,7 @@ function Footer() {
                     <NavLink to="/" className="nav-links">Home</NavLink>
                     <NavLink to="/about" className="nav-links">Nosotras</NavLink>
                     <NavLink to="/service" className="nav-links">Servicios</NavLink>
-                    <NavLink to="/menu" className="nav-links">Productos</NavLink>
+                    <NavLink to="/menu" className="nav-links">Menú</NavLink>
                     <NavLink to="/contact" className="nav-links">Contacto</NavLink>
                 </nav>
 

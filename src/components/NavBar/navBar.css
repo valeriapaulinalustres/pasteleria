@@ -1,5 +1,5 @@
 .navBar-container{
-    background-color: gray;
+    background-color: var(--gris);
     display: flex;
     flex-direction: row;
     justify-content: space-between;

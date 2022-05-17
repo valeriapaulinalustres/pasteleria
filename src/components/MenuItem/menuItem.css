@@ -1,0 +1,43 @@
+.menuItem-container{
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gris);
+    margin: 10px;
+    opacity:0;
+}
+
+.menu-img {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+   
+   
+}
+.menu-img > .crop {
+    position:absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+.price{
+    color: white;
+    
+    font-family: 'Heebo', sans-serif;
+    font-size: 20px;
+    
+}
+.item-name{
+   
+    color: var(--rojo-marca);
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+}
