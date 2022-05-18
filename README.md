@@ -16,6 +16,8 @@
 -when finished, it will be responsive design
 
 
+<h3 align="left">Youu can visit my app here: (remember it´s still on process!)</h3>
+https://pasteleria-9wpbmtaxo-valeriapaulinalustres.vercel.app/
 
 <h3 align="left">Connect with me:</h3>
 <p>valeriapaulinalustres@yahoo.com.ar</p>

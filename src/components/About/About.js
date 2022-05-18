@@ -28,7 +28,7 @@ const fadeIn = element => {
     ease: "power4.out",
     duration:3,
     stagger: {
-      amount: 0.3
+      amount: 0.6
     }
   });
 };
@@ -73,7 +73,7 @@ intersection && intersection.intersectionRatio < 0.5
 
 //photos and description
   useEffect(() => {
-    gsap.to(elTitle.current, { y:20 });
+    gsap.to(elTitle.current, { y:80, duration:3 });
    
     tl.current = gsap.timeline()
       .to(q(".imgOne"), {

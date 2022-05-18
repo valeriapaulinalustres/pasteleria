@@ -32,6 +32,11 @@
     height: 40px;
     color: white;
 }
+.footer-icon-socialMedia:hover{
+color: var(--rojo-marca);
+
+}
+
 
 .footer-text{
     font-family:  'Heebo', sans-serif;

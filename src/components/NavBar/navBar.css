@@ -7,7 +7,7 @@
     position: fixed;
     width: 100%;
     z-index: 5;
-    height: 60px;
+    height: 80px;
 
 }
 
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 5px;
+    margin: 10px 5px;
     width: 30%;
     text-decoration: none;
 
@@ -27,15 +27,22 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+.logo:hover{
+    color: white;
+}
 .nav-menu{
     margin: 5px;
 }
+
 
 .nav-links{
     margin: 5px 10px;
     text-decoration: none;
     font-family:  'Heebo', sans-serif;
     color: white;
+}
+.nav-links:hover{
+    color: var(--rojo-marca);
 }
 .wa-navbar{
     margin: 10px 0px;

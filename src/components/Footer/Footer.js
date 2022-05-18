@@ -10,17 +10,30 @@ import { BsWhatsapp } from 'react-icons/bs';
 import Wa from '../Wa/Wa'
 
 function Footer() {
+
+    const styleLinksFooter =({ isActive }) =>
+  isActive
+      ? {
+          color: '#fff',
+          background: '#ff7396',
+          borderRadius: 8,
+          paddingLeft: 6,
+          paddingRight: 6,
+      }
+      : {
+          color: '#fff',
+         
+      }
     return (
         <div className='footer'>
 <div className='footer-container'>
             <div>
                 <h5>Company</h5>
                 <nav className='footer-menu'>
-                    <NavLink to="/" className="nav-links">Home</NavLink>
-                    <NavLink to="/about" className="nav-links">Nosotras</NavLink>
-                    <NavLink to="/service" className="nav-links">Servicios</NavLink>
-                    <NavLink to="/menu" className="nav-links">Menú</NavLink>
-                    <NavLink to="/contact" className="nav-links">Contacto</NavLink>
+                    <NavLink to="/" className="nav-links" style={styleLinksFooter}>Home</NavLink>
+                    <NavLink to="/about" className="nav-links" style={styleLinksFooter}>Nosotras</NavLink>
+                    <NavLink to="/menu" className="nav-links" style={styleLinksFooter}>Menú</NavLink>
+                    <NavLink to="/contact" className="nav-links" style={styleLinksFooter}>Contacto</NavLink>
                 </nav>
 
             </div>

@@ -2,7 +2,7 @@
     
     .container {
       width: 1440px;
-      margin: 0 auto;
+      margin: 30px;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -30,4 +30,73 @@
       width: 500px;
       margin: 0 auto;
     }
-  
+
+    .main{
+      background-color: var(--gris);
+    }
+    .home-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+    .home-first-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+      
+    }
+    .home-first-container-wa{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      
+    }
+    .home-first-text{
+      font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    margin: 0;
+    }
+    .home-container-FirstSection{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 60px;
+    }
+  .home-container-SecondSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 40px 20px;
+  }
+  .home-second-card{
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+
+box-shadow:  10px 10px 10px 10px #d9d9d9,
+             5px 5px 5px  #ffffff;
+
+  }
+  .home-second-icon{
+    width: 60px;
+    height: 60px;
+    color: var(--rojo);
+  }
+  .home-second-card-title{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--gris);
+    
+  }
+  .home-second-card-text{
+    font-family: 'Heebo', sans-serif;
+    color: var(--gris);
+  }

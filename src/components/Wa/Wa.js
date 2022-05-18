@@ -13,7 +13,7 @@ function Wa() {
 
 
   return (
-    <a href="https://wa.me/5491160127926/?text=Hola%20Mi%20Pastelería" target="_blank"><button className='about-button button'  onMouseEnter={onEnter} onMouseLeave={onLeave} ><BsWhatsapp /></button></a>
+    <a href="https://wa.me/5491160127926/?text=Hola%20Mi%20Pastelería" target="_blank"><button className='about-button button a-button'  onMouseEnter={onEnter} onMouseLeave={onLeave} ><BsWhatsapp /></button></a>
   )
 }
 

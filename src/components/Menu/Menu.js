@@ -103,7 +103,7 @@ const imgContainer = gsap.utils.selector(imgContainerRef);
 
 useEffect(() => {
   
-  gsap.to(menuRef.current, { y:20 });
+  gsap.to(menuRef.current, { y:80, duration:3 });
 
   tl.current = gsap.timeline()
   .to(imgContainer(".menuItem-container"), {

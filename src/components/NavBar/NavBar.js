@@ -35,7 +35,6 @@ function NavBar() {
       <nav className='nav-menu'>
         <NavLink to="/" className="nav-links" style={styleLinks} >HOME</NavLink>
         <NavLink to="/about" className="nav-links" style={styleLinks}>NOSOTRAS</NavLink>
-        <NavLink to="/service" className="nav-links" style={styleLinks}>SERVICIOS</NavLink>
         <NavLink to="/menu" className="nav-links" style={styleLinks}>MENÚ</NavLink>
         <NavLink to="/contact" className="nav-links" style={styleLinks}>CONTACTO</NavLink>
         <Wa className='wa-navbar'/>
