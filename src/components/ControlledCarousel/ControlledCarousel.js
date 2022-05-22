@@ -52,4 +52,4 @@ function ControlledCarousel() {
     );
   }
   export default ControlledCarousel
-  //render(<ControlledCarousel />);
+ // render(<ControlledCarousel />);
