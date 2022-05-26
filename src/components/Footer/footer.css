@@ -14,6 +14,8 @@
 .footer-menu{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
 }
 
@@ -50,4 +52,15 @@ color: var(--rojo-marca);
     text-align: center;
     border-top: 1px solid black;
     padding-top: 5px;
+}
+
+@media only screen and (max-width:980px) {
+    .footer-container{
+flex-direction: column;
+padding-left: 30px;
+    }
+    .footer-content{
+        margin: 10px;
+    }
+    
 }

@@ -14,9 +14,10 @@
 .nav-brand{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     margin: 10px 5px;
-    width: 30%;
+    width: 500px;
     text-decoration: none;
 
 }
@@ -46,4 +47,38 @@
 }
 .wa-navbar{
     margin: 10px 0px;
+}
+@media only screen and (max-width:980px) {
+.navBar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 220px;
+    margin: 0;
+    position: absolute;
+
+}
+.nav-brand{
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.nav-menu{
+    margin: 0;
+}
+.nav-links{
+    margin: 5px;
+}
 }

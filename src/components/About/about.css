@@ -65,6 +65,7 @@
 }
 .about-text{
     opacity: 0;
+    margin-top: 50px;
 }
 
 
@@ -121,4 +122,18 @@ box-shadow:  10px 10px 10px 10px #d9d9d9,
 .shadow{
     border-radius: 10px;
 
+}
+
+@media only screen and (max-width:980px) {
+.about-cakes{
+    flex-direction: column;
+}
+.about-team-img {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.alfajores{
+    margin-top: 150px;
+}
 }

@@ -32,6 +32,8 @@
 .contact{
 display: flex;
 flex-direction: column;
+justify-content: center;
+align-items: center;
 margin: 30px;
 }
 .contact-icons-text{
@@ -55,7 +57,38 @@ box-shadow:  11px 11px 22px #dbdbdb,
 }
 .map-container{
     margin-top: 200px;
+    
 }
 .contact-move{
     opacity: 0;
+    text-align: center;
+
+}
+.container-map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width:980px){
+    .contact-contacts{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .contact{
+        margin: 0;
+    }
+    .contact-text{
+        text-align: center;
+    }
+    .map{
+        width: 300px;
+        height: 300px;
+    }
+   
+
+
 }

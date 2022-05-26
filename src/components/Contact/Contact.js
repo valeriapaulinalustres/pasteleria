@@ -130,8 +130,8 @@ function Contact() {
         </div>
 
         <div ref={sectionRef} className='map-container'>
-          <div className='fadeIn' ref={mapRef}>
-            <h4 className='map-moving'>Cómo llegar:</h4>
+          <div className='fadeIn container-map' ref={mapRef}>
+            <h4 className='map-move'>Cómo llegar:</h4>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.235528120289!2d-58.601596985020194!3d-34.62348788045437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb861c3359a83%3A0x80cb954382f92285!2sDinamarca%201755%2C%20B1685EJS%20El%20Palomar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1639222449545!5m2!1ses!2sar"
               loading="lazy" className='map mar-moving'></iframe>

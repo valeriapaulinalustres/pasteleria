@@ -1,5 +1,5 @@
 .container {
-  width: 1440px;
+  width: 100vh;
   margin: 30px;
   height: 100vh;
   display: flex;
@@ -9,8 +9,8 @@
 
 
 .img-container {
-  width: 500px;
-  height: 300px;
+  width: 1440px;
+  
   position: relative;
   overflow: hidden;
 }
@@ -26,7 +26,7 @@
 }
 
 img {
-  width: 500px;
+  width: 100vh;
   margin: 0 auto;
 }
 
@@ -37,8 +37,7 @@ img {
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+ 
 }
 
 .home-first-container {
@@ -54,6 +53,8 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
 }
 
@@ -70,7 +71,9 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .home-container-SecondSection {
@@ -78,7 +81,11 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 160px 160px 20px 20px;
+  flex-wrap: wrap;
+  margin-top: 160px;
+  margin-bottom: 160px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 10px;
 }
 
@@ -127,7 +134,7 @@ margin: 0;
 }
 
 .home-container-ThirdSection {
-  height: 200px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,7 +149,7 @@ margin: 0;
 
 /* Fourth section*/
 .home-container-fourthSection {
-  height: 200px;
+  height: 250px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -235,7 +242,7 @@ margin: 0;
 
 /* Fifth section*/
 .home-container-fifthSection {
-  height: 200px;
+  height: 250px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -281,7 +288,7 @@ margin: 0;
 
 /* sixth section*/
 .home-container-sixthSection {
-  height: 200px;
+  height: 250px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -327,7 +334,7 @@ margin: 0;
 
 /* seventh section*/
 .home-container-seventhSection {
-  height: 200px;
+  height: 250px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -369,4 +376,127 @@ margin: 0;
   text-justify: center;
   margin: 10px;
   color: var(--rojo);
+}
+.home-container-Third{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width:980px) {
+  .container {
+    width: 70%;
+    margin: 10px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    height: 200px;
+  }
+  .home-container{
+    
+    align-items: center;
+
+  }
+  
+  
+  .img-container {
+    width: 260px;
+    
+  }
+  .home-container-FirstSection{
+    flex-direction: column;
+    
+  }
+ .padding{
+   padding-right: 10px;
+   padding-left: 10px;
+   margin: 0;
+   
+ }
+ .home-first-container-wa{
+   margin-bottom: 50px;
+  
+ }
+  .home-container-SecondSection{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-container-ThirdSection {
+    height: 400px;
+  }
+  .home-container-fourthSection{
+   margin: 70px 0px 0px 0px;
+  }
+  .img-fourth-home-container{
+    margin: 0;
+  }
+  .home-container-fifthSection{
+    margin: 70px 0px 0px 0px;
+  }
+  .img-fifth-home-container{
+    margin: 0;
+  }
+  .home-container-sixthSection{
+    margin: 70px 0px 0px 0px;
+  }
+  .img-sixth-home-container{
+    margin: 0;
+  }
+  .home-container-seventhSection{
+    margin: 70px 0px 0px 0px;
+  }
+  .img-seventh-home-container{
+    margin: 0;
+  }
+  img {
+    width: 260px;
+   
+  }
+ 
+}
+@media only screen and (max-width:980px) {
+.text-fourth-home{
+  margin: 0;
+}
+.text-fifth-home{
+  margin: 0;
+}
+.text-sixth-home{
+  margin: 0;
+}
+.text-seventh-home{
+  margin: 0;
+}
+.img-fourth-home-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 240px;
+  height: 160px;
+}
+.img-fifth-home-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 240px;
+  height: 160px;
+}
+.img-sixth-home-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 240px;
+  height: 160px;
+}
+.img-seventh-home-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 240px;
+  height: 160px;
+}
+
+
 }

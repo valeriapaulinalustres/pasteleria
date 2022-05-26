@@ -37,7 +37,7 @@ function Footer() {
     return (
         <div className='footer'>
             <div className='footer-container'>
-                <div>
+                <div className='footer-content' >
                     <h5>Company</h5>
                     <nav className='footer-menu'>
                         <NavLink to="/" className="nav-links" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} style={styleLinksFooter}>Home</NavLink>
@@ -47,7 +47,7 @@ function Footer() {
                     </nav>
 
                 </div>
-                <div>
+                <div className='footer-content' >
                     <h5>Contacto</h5>
                     <div className='footer-contact'>
                         <FaMapMarkerAlt className='footer-icon' />
@@ -68,7 +68,7 @@ function Footer() {
                     </div>
 
                 </div>
-                <div>
+                <div className='footer-content' >
                     <h5>Abierto</h5>
                     <p className='footer-text' >Martes - Viernes</p>
                     <p className='footer-text' >15 a 20 hs</p>
@@ -76,7 +76,7 @@ function Footer() {
                     <p className='footer-text' >11 a 19 hs</p>
 
                 </div>
-                <div>
+                <div className='footer-content' >
                     <h5>Escribinos</h5>
                     <Wa />
 

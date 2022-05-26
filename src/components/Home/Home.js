@@ -63,9 +63,9 @@ function Home() {
 
   useEffect(() => {
     gsap.to(textHomeRef.current, { duration: 1.5, repeat: 3000, color: "#ce2f56" });
-    gsap.to(titleHomeRef.current, { opacity: 1, duration: 3, y: -80, color: "#ffffff" });
+    gsap.to(titleHomeRef.current, { opacity: 1, duration: 5, y: -80, color: "#ffffff" });
 
-    gsap.to(textWaHomeRef.current, { duration: 3, y: 50 });
+    gsap.to(textWaHomeRef.current, { duration: 6, y: 20 });
   }, [])
   
  //scroll second section
@@ -269,7 +269,7 @@ intersectionSeventh && intersectionSeventh.intersectionRatio < 0.5
           </>
         </div>
         <div className="home-first-container">
-          <h2 ref={titleHomeRef} className="invisible">Disfrutá los sabores de la alta pastelería</h2>
+          <h2 ref={titleHomeRef} className="invisible padding">Disfrutá los sabores de la alta pastelería</h2>
           <div className="home-first-container-wa" ref={textWaHomeRef}>
             <p className="home-first-text" ref={textHomeRef}>Escríbenos:</p>
             <Wa />
@@ -305,14 +305,14 @@ intersectionSeventh && intersectionSeventh.intersectionRatio < 0.5
         </div>
       </section>
 
-      <section ref={thirdSectionRef}>
+      <section ref={thirdSectionRef} className="home-container-Third">
         <div className="home-container-ThirdSection fadeInThird">
         <p className="text-home-third">Recibimos tu pedido por whatsapp</p>
           <Wa className="fadeInThird"/>
         </div>      
       </section>
 
-      <section className="home-container-fourthSection " ref={fourthSectionRef}>
+      <section className="home-container-fourthSection" ref={fourthSectionRef}>
         <div className="img-fourth-home-container fourth-section-img-text fadeIn"><img src="https://cdn.pixabay.com/photo/2015/02/17/15/33/wedding-cake-639516__340.jpg" className="crop" alt="torta de bodas" width="100%"></img></div>
         <h5 className="text-fourth-home fourth-section-img-text fadeIn">Pastelería para eventos</h5>
       </section>

@@ -61,8 +61,9 @@ function NavBar() {
         <NavLink to="/about" className="nav-links" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} style={styleLinks}>NOSOTRAS</NavLink>
         <NavLink to="/menu" className="nav-links" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} style={styleLinks}>MENÚ</NavLink>
         <NavLink to="/contact" className="nav-links" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} style={styleLinks}>CONTACTO</NavLink>
-        <Wa className='wa-navbar' />
+        
       </nav>
+      <Wa className='wa-navbar' />
     </div>
   )
 }

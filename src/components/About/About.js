@@ -167,7 +167,7 @@ function About() {
         opacity: 1,
         scale: 1,
         delay: 0.5,
-        y: -700,
+      
         stagger: 1,
 
 
@@ -177,7 +177,7 @@ function About() {
         opacity: 1,
         scale: 1,
         stagger: 0.5,
-        y: 600,
+      
 
       }, "-=1")
 
@@ -196,33 +196,10 @@ function About() {
 
       }, "-=1")
 
-      .to(aboutImgTwo(".imgThree"), {
-        duration: 2,
-        x: 350,
-
-      },)
-
-      .to(aboutImgTwo(".imgFour"), {
-        duration: 2,
-        x: -350,
-
-      },"-=2")
-       
-      .to(aboutImgOne(".imgOne"), {
-        duration: 2,
-        x: 350,
-
-      },)
-
-      .to(aboutImgOne(".imgTwo"), {
-        duration: 2,
-        x: -350,
-
-      },"-=2")
-
+      
       .to(aboutText(".about-button"), {
         duration: 3,
-        y: 280,
+        y: 310,
         scale: 3,
         opacity: 1,
 
@@ -238,15 +215,27 @@ function About() {
 
       .to(aboutImgOne(".imgOne"), {
         duration: 2,
-        x: 350,
+        rotate: 360,
 
       },)
 
       .to(aboutImgOne(".imgTwo"), {
         duration: 2,
-        x: -350,
+        rotate: 360,
 
-      },"-=2")
+      },"-=1")
+
+      .to(aboutImgTwo(".imgThree"), {
+        duration: 2,
+        rotate: 360,
+
+      },)
+
+      .to(aboutImgTwo(".imgFour"), {
+        duration: 2,
+        rotate: 360,
+
+      },"-=1")
 
 .to(aboutText(".about-button"), {
         duration: 4,
@@ -284,11 +273,14 @@ function About() {
           <p className='about-text paragraph'>Elaboramos en forma casera los productos más famosos de la pastelería. </p>
           <div>
          </div>
-          <Wa />
+        
+         <Wa />
+         
+          
         </div>
         <div className='about-cakes' ref={aboutImgTwoRef}>
           <img src="https://cdn.pixabay.com/photo/2022/04/07/20/34/sponge-cake-7118242__340.jpg" alt="torta de bodas" width="100%" className='about-image imgDown imgThree imgSix shadow' />
-          <img src="https://media.istockphoto.com/photos/traditional-argentinian-alfajores-picture-id1180243264?b=1&k=20&m=1180243264&s=170667a&w=0&h=fwBUASfR3OI9xjjHcZqoPBXMtjkxlhKj0jG-TMfeOfM=" alt="alfajores" width="100%" className='about-image imgDown imgFour shadow' />
+          <img src="https://media.istockphoto.com/photos/traditional-argentinian-alfajores-picture-id1180243264?b=1&k=20&m=1180243264&s=170667a&w=0&h=fwBUASfR3OI9xjjHcZqoPBXMtjkxlhKj0jG-TMfeOfM=" alt="alfajores" width="100%" className='about-image imgDown imgFour shadow alfajores' />
         </div>
       </section>
 
