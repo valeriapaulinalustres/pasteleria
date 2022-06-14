@@ -6,18 +6,15 @@ import React from 'react';
 import AnimationRoutes from './AnimationRoutes';
 
 
-
 function App() {
   return (
     <div>
       <WaProvider>
-      <NavBar />
-     <AnimationRoutes />
-      <Footer />
+        <NavBar />
+        <AnimationRoutes />
+        <Footer />
       </WaProvider>
-      
     </div>
-
   )
 }
 

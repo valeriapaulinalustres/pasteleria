@@ -3,7 +3,6 @@ import './home.css';
 import { TimelineLite, Power2 } from "gsap";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
 import Wa from '../Wa/Wa';
-import ControlledCarousel from '../ControlledCarousel/ControlledCarousel';
 import { GiStairsCake } from 'react-icons/gi';
 import { SiCodechef } from 'react-icons/si';
 import { GiDiploma } from 'react-icons/gi';
@@ -15,16 +14,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 import { useIntersection } from "react-use";
 
 
-
-
-
 function Home() {
-
-
   let image = useRef(null);
   let container = useRef(null);
   let imageReveal = CSSRulePlugin.getRule(".img-container:after");
-
   let tl = new TimelineLite();
 
   useEffect(() => {
@@ -43,7 +36,6 @@ function Home() {
   const onLeaveCard = ({ currentTarget }) => {
     gsap.to(currentTarget, { backgroundColor: "#ffffff", y: 20 });
   }
-
   const mouseMove = ({ currentTarget }) => {
     gsap.to(currentTarget, { backgroundColor: "#ff7396", y: -20 });
   }
@@ -58,106 +50,99 @@ function Home() {
   const sixthSectionRef = useRef(null);
   const seventhSectionRef = useRef(null);
 
-
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     gsap.to(textHomeRef.current, { duration: 1.5, repeat: 3000, color: "#ce2f56" });
     gsap.to(titleHomeRef.current, { opacity: 1, duration: 5, y: -80, color: "#ffffff" });
-
     gsap.to(textWaHomeRef.current, { duration: 6, y: 20 });
   }, [])
-  
- //scroll second section
- const intersectionSecond = useIntersection(secondSectionRef, {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.5
-});
-const fadeInSecond = element => {
-  gsap.to(element, 1, {
-    opacity: 1,
-    y: -80,
-    ease: "power4.out",
-    duration:3,
-    stagger: {
-      amount: 0.6
-    }
+
+  //scroll second section
+  const intersectionSecond = useIntersection(secondSectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5
   });
-};
-const fadeOutSecond = element => {
-  gsap.to(element, 1, {
-    opacity: 0,
-    y: -20,
-    ease: "power4.out",  
+  const fadeInSecond = element => {
+    gsap.to(element, 1, {
+      opacity: 1,
+      y: -80,
+      ease: "power4.out",
+      duration: 3,
+      stagger: {
+        amount: 0.6
+      }
+    });
+  };
+  const fadeOutSecond = element => {
+    gsap.to(element, 1, {
+      opacity: 0,
+      y: -20,
+      ease: "power4.out",
+    });
+  };
+  intersectionSecond && intersectionSecond.intersectionRatio < 0.5
+    ? fadeOutSecond(".fadeInSecond")
+    : fadeInSecond(".fadeInSecond");
+
+  //scroll third section
+  const intersectionThird = useIntersection(thirdSectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5
   });
-};
-intersectionSecond && intersectionSecond.intersectionRatio < 0.5
-  ? fadeOutSecond(".fadeInSecond")
-  : fadeInSecond(".fadeInSecond");
-
-
-
-
- //scroll third section
- const intersectionThird = useIntersection(thirdSectionRef, {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.5
-});
-const fadeInThird = element => {
-  gsap.to(element, 1, {
-    opacity: 1,
-    backgroundColor: "#ce2f56",
-    ease: "power4.out",
-    duration:3,
-    stagger: {
-      amount: 0.6
-    }
-  });
-};
-const fadeOutThird = element => {
-  gsap.to(element, 1, {
-    opacity: 0,
-    backgroundColor: "#ffffff",
-    ease: "power4.out",  
-  });
-};
-intersectionThird && intersectionThird.intersectionRatio < 0.5
-  ? fadeOutThird(".fadeInThird")
-  : fadeInThird(".fadeInThird");
-
+  const fadeInThird = element => {
+    gsap.to(element, 1, {
+      opacity: 1,
+      backgroundColor: "#ce2f56",
+      ease: "power4.out",
+      duration: 3,
+      stagger: {
+        amount: 0.6
+      }
+    });
+  };
+  const fadeOutThird = element => {
+    gsap.to(element, 1, {
+      opacity: 0,
+      backgroundColor: "#ffffff",
+      ease: "power4.out",
+    });
+  };
+  intersectionThird && intersectionThird.intersectionRatio < 0.5
+    ? fadeOutThird(".fadeInThird")
+    : fadeInThird(".fadeInThird");
 
   //scroll fourth section
- 
-const intersectionFourth = useIntersection(fourthSectionRef, {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.5
-});
-const fadeIn = element => {
-  gsap.to(element, 1, {
-    opacity: 1,
-    y: -80,
-    ease: "power4.out",
-    duration:3,
-    stagger: {
-      amount: 0.6
-    }
+  const intersectionFourth = useIntersection(fourthSectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5
   });
-};
-const fadeOut = element => {
-  gsap.to(element, 1, {
-    opacity: 0,
-    y: -20,
-    ease: "power4.out",  
-  });
-};
-intersectionFourth && intersectionFourth.intersectionRatio < 0.5
-  ? fadeOut(".fadeIn")
-  : fadeIn(".fadeIn");
+  const fadeIn = element => {
+    gsap.to(element, 1, {
+      opacity: 1,
+      y: -80,
+      ease: "power4.out",
+      duration: 3,
+      stagger: {
+        amount: 0.6
+      }
+    });
+  };
+  const fadeOut = element => {
+    gsap.to(element, 1, {
+      opacity: 0,
+      y: -20,
+      ease: "power4.out",
+    });
+  };
+  intersectionFourth && intersectionFourth.intersectionRatio < 0.5
+    ? fadeOut(".fadeIn")
+    : fadeIn(".fadeIn");
 
-  //scroll section five
+  //scroll fifth section
   const intersectionFifth = useIntersection(fifthSectionRef, {
     root: null,
     rootMargin: "0px",
@@ -168,24 +153,24 @@ intersectionFourth && intersectionFourth.intersectionRatio < 0.5
       opacity: 1,
       y: -80,
       ease: "power4.out",
-      duration:3,
+      duration: 3,
       stagger: {
         amount: 0.6
       }
-    }); 
+    });
   };
   const fadeOutFifth = element => {
     gsap.to(element, 1, {
       opacity: 0,
       y: -20,
-      ease: "power4.out",     
+      ease: "power4.out",
     });
   };
   intersectionFifth && intersectionFifth.intersectionRatio < 0.5
     ? fadeOutFifth(".fadeInFifth")
     : fadeInFifth(".fadeInFifth");
 
-     //scroll section six
+  //scroll sixth section
   const intersectionSixth = useIntersection(sixthSectionRef, {
     root: null,
     rootMargin: "0px",
@@ -196,55 +181,52 @@ intersectionFourth && intersectionFourth.intersectionRatio < 0.5
       opacity: 1,
       y: -80,
       ease: "power4.out",
-      duration:3,
+      duration: 3,
       stagger: {
         amount: 0.6
       }
-    }); 
+    });
   };
   const fadeOutSixth = element => {
     gsap.to(element, 1, {
       opacity: 0,
       y: -20,
       ease: "power4.out",
-      
+
     });
   };
   intersectionSixth && intersectionSixth.intersectionRatio < 0.5
     ? fadeOutSixth(".fadeInSixth")
     : fadeInSixth(".fadeInSixth");
 
-
-//scroll section six
-const intersectionSeventh = useIntersection(seventhSectionRef, {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.5
-});
-const fadeInSeventh = element => {
-  gsap.to(element, 1, {
-    opacity: 1,
-    y: -80,
-    ease: "power4.out",
-    duration:3,
-    stagger: {
-      amount: 0.6
-    }
-  }); 
-};
-const fadeOutSeventh = element => {
-  gsap.to(element, 1, {
-    opacity: 0,
-    y: -20,
-    ease: "power4.out",
-    
+  //scroll seventh section 
+  const intersectionSeventh = useIntersection(seventhSectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5
   });
-};
-intersectionSeventh && intersectionSeventh.intersectionRatio < 0.5
-  ? fadeOutSeventh(".fadeInSeventh")
-  : fadeInSeventh(".fadeInSeventh");
+  const fadeInSeventh = element => {
+    gsap.to(element, 1, {
+      opacity: 1,
+      y: -80,
+      ease: "power4.out",
+      duration: 3,
+      stagger: {
+        amount: 0.6
+      }
+    });
+  };
+  const fadeOutSeventh = element => {
+    gsap.to(element, 1, {
+      opacity: 0,
+      y: -20,
+      ease: "power4.out",
 
-
+    });
+  };
+  intersectionSeventh && intersectionSeventh.intersectionRatio < 0.5
+    ? fadeOutSeventh(".fadeInSeventh")
+    : fadeInSeventh(".fadeInSeventh");
 
   return (
     <motion.div
@@ -252,8 +234,6 @@ intersectionSeventh && intersectionSeventh.intersectionRatio < 0.5
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-
-
     >
       <section className='main home-container-FirstSection'>
         <div className="container" ref={el => (container = el)}>
@@ -307,9 +287,9 @@ intersectionSeventh && intersectionSeventh.intersectionRatio < 0.5
 
       <section ref={thirdSectionRef} className="home-container-Third">
         <div className="home-container-ThirdSection fadeInThird">
-        <p className="text-home-third">Recibimos tu pedido por whatsapp</p>
-          <Wa className="fadeInThird"/>
-        </div>      
+          <p className="text-home-third">Recibimos tu pedido por whatsapp</p>
+          <Wa className="fadeInThird" />
+        </div>
       </section>
 
       <section className="home-container-fourthSection" ref={fourthSectionRef}>
@@ -318,8 +298,8 @@ intersectionSeventh && intersectionSeventh.intersectionRatio < 0.5
       </section>
 
       <section className="home-container-fifthSection" ref={fifthSectionRef}>
-      <h5 className="text-fifth-home fifth-section-img-text fadeInFifth">Meriendas empresariales</h5>
-        <div className="img-fifth-home-container fifth-section-img-text fadeInFifth"><img src="https://cdn.pixabay.com/photo/2016/11/06/14/44/a-variety-of-cakes-1803074__340.jpg" className="crop" alt="torta de bodas" width="100%"></img></div>       
+        <h5 className="text-fifth-home fifth-section-img-text fadeInFifth">Meriendas empresariales</h5>
+        <div className="img-fifth-home-container fifth-section-img-text fadeInFifth"><img src="https://cdn.pixabay.com/photo/2016/11/06/14/44/a-variety-of-cakes-1803074__340.jpg" className="crop" alt="torta de bodas" width="100%"></img></div>
       </section>
 
       <section className="home-container-sixthSection" ref={sixthSectionRef}>
@@ -328,13 +308,10 @@ intersectionSeventh && intersectionSeventh.intersectionRatio < 0.5
       </section>
 
       <section className="home-container-seventhSection" ref={seventhSectionRef}>
-      <h5 className="text-seventh-home seventh-section-img-text fadeInSeventh">Decoración de pasteles</h5>
-        <div className="img-seventh-home-container seventh-section-img-text fadeInSeventh"><img src="https://media.istockphoto.com/photos/flower-cake-picture-id157195431?k=20&m=157195431&s=612x612&w=0&h=wP5ITigdeCnihTnN_pJuPIpt8PfVGajezs69igzm-PM=" className="crop" alt="torta de bodas" width="100%"></img></div>        
+        <h5 className="text-seventh-home seventh-section-img-text fadeInSeventh">Decoración de pasteles</h5>
+        <div className="img-seventh-home-container seventh-section-img-text fadeInSeventh"><img src="https://media.istockphoto.com/photos/flower-cake-picture-id157195431?k=20&m=157195431&s=612x612&w=0&h=wP5ITigdeCnihTnN_pJuPIpt8PfVGajezs69igzm-PM=" className="crop" alt="torta de bodas" width="100%"></img></div>
       </section>
-
-
     </motion.div>
-
   )
 }
 

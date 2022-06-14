@@ -15,7 +15,6 @@ const WaProvider = ({ children }) => {
     gsap.to(currentTarget, { backgroundColor: "#ff7396", scale: 2 });
   };
 
-
   const data = { onEnter, onLeave }
 
   return (
@@ -26,7 +25,7 @@ const WaProvider = ({ children }) => {
 }
 
 export { WaProvider };
-//exporto contexto
+//export context
 export default WaContext;
 
 
