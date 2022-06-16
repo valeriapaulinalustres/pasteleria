@@ -13,6 +13,7 @@ import { motion } from 'framer-motion';
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 import { useIntersection } from "react-use";
 import CSSPlugin from "gsap/CSSPlugin";
+import Logo from "../Logo/Logo";
 
 
 function Home() {
@@ -285,6 +286,7 @@ function Home() {
         </div>
         <div className="home-first-container">
           <h2 ref={titleHomeRef} className="padding">Disfrutá los sabores de la alta pastelería</h2>
+          <Logo />
           <div className="home-first-container-wa" ref={textWaHomeRef}>
             <p className="home-first-text" ref={textHomeRef}>Escribinos:</p>
             <Wa />
@@ -353,7 +355,7 @@ function Home() {
   <div className="bg"></div>
   <h2>Te esperamos</h2>
 </section>
-
+<Logo />
     </motion.div>
   )
 }

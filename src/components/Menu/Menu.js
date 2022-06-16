@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './menu.css';
 import MenuItem from '../MenuItem/MeniItem';
 import { gsap } from 'gsap';
+import Logo from '../Logo/Logo'
 
 function Menu() {
 
@@ -118,6 +119,7 @@ function Menu() {
     <div>
       <div className='subtitle-background'>
         <h2 ref={menuRef}>Nuestras delicias:</h2>
+        <Logo />
       </div>
       <div className='menu-container' ref={imgContainerRef}>
         {products.map((item, index) => (

@@ -6,7 +6,8 @@ import Wa from '../Wa/Wa';
 import { AiFillInstagram } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { TextPlugin } from 'gsap/TextPlugin.js';
-import {Flip} from 'gsap/Flip'
+import {Flip} from 'gsap/Flip';
+import Logo from '../Logo/Logo'
 
 function About() {
 
@@ -18,6 +19,7 @@ function About() {
   const chefIconRef = useRef();
   const nameChefTwoRef = useRef();
   const chefIconTwoRef = useRef();
+ 
 
   //scroll
   const sectionRefAbout = useRef(null);
@@ -184,11 +186,6 @@ function About() {
   }, []);
 
 
-  
-
-
-
-
   return (
     <motion.div className='about-container'
       initial={{ opacity: 0 }}
@@ -196,6 +193,7 @@ function About() {
       exit={{ opacity: 0 }}>
       <div className='subtitle-background'>
         <h2 ref={aboutTitle}>Nosotras</h2>
+       <Logo />
       </div>
 
       <section className='about-pastry'>
@@ -235,7 +233,7 @@ function About() {
           </div>
         </div>
       </section>
-     
+      <Logo />
     </motion.div>
   )
 }

@@ -57,6 +57,10 @@
 
 .subtitle-background {
     background-color: var(--gris);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 

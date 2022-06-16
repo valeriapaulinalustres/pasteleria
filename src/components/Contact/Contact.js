@@ -6,6 +6,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoMdMail } from 'react-icons/io';
 import Wa from '../Wa/Wa';
+import Logo from '../Logo/Logo'
 
 function Contact() {
 
@@ -80,6 +81,7 @@ function Contact() {
     <div>
       <div className='subtitle-background'>
         <h2 ref={titleContact}>Contacto</h2>
+        <Logo />
       </div>
       <div className='contact-container'>
         <div ref={textContact}>
@@ -120,6 +122,7 @@ function Contact() {
               loading="lazy" className='map mar-moving'></iframe>
           </div>
         </div>
+        <Logo />
       </div>
     </div>
   )
