@@ -5,8 +5,10 @@ import { gsap } from 'gsap';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoMdMail } from 'react-icons/io';
+import { BsFillEnvelopeFill } from 'react-icons/bs';
 import Wa from '../Wa/Wa';
-import Logo from '../Logo/Logo'
+import Logo from '../Logo/Logo';
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin'
 
 function Contact() {
 
@@ -53,10 +55,30 @@ function Contact() {
   const tl = useRef();
   const tlmap = useRef();
 
+
+  gsap.registerPlugin(MotionPathPlugin);
+
   //photos and description
   useEffect(() => {
     gsap.to(titleContact.current, { y: 80, duration: 3 });
     gsap.to(refWa.current, { scale: 2 });
+
+
+   
+gsap.to(".envelope", {
+  duration: 12, 
+  repeat: 12,
+  repeatDelay: 3,
+  yoyo: true,
+  ease: "power1.inOut",
+  motionPath:{
+    path: [{x:200, y:100}, {x:100, y:10}, {x:300, y:100}],
+    align: [{x:200, y:100}, {x:100, y:10}, {x:300, y:100}],
+    autoRotate: true,
+    alignOrigin: [0.5, 0.5]
+  }
+});
+
 
     tl.current = gsap.timeline()
       .to(qContact(".contact-move"), {
@@ -74,9 +96,14 @@ function Contact() {
         stagger: 1,
         opacity: 1,
       })
+
+      
+
   }, []);
 
+  
 
+  
   return (
     <div>
       <div className='subtitle-background'>
@@ -123,7 +150,10 @@ function Contact() {
           </div>
         </div>
         <Logo />
+        <BsFillEnvelopeFill className='envelope' />
+        
       </div>
+     
     </div>
   )
 }
