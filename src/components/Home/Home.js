@@ -12,6 +12,7 @@ import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 import { useIntersection } from "react-use";
+import CSSPlugin from "gsap/CSSPlugin";
 
 
 function Home() {
@@ -51,6 +52,7 @@ function Home() {
   const seventhSectionRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(CSSPlugin, CSSRulePlugin)
 
   useEffect(() => {
     gsap.to(textHomeRef.current, { duration: 1.5, repeat: 3000, color: "#ce2f56" });
@@ -62,7 +64,7 @@ function Home() {
   const intersectionSecond = useIntersection(secondSectionRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5
+    threshold: 0.8
   });
   const fadeInSecond = element => {
     gsap.to(element, 1, {
@@ -82,7 +84,7 @@ function Home() {
       ease: "power4.out",
     });
   };
-  intersectionSecond && intersectionSecond.intersectionRatio < 0.5
+  intersectionSecond && intersectionSecond.intersectionRatio < 0.8
     ? fadeOutSecond(".fadeInSecond")
     : fadeInSecond(".fadeInSecond");
 
@@ -228,6 +230,39 @@ function Home() {
     ? fadeOutSeventh(".fadeInSeventh")
     : fadeInSeventh(".fadeInSeventh");
 
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
+    
+    gsap.utils.toArray(".sectionParallax").forEach((section, i) => {
+      section.bg = section.querySelector(".bg"); 
+    
+      // Give the backgrounds some random images
+      section.bg.style.backgroundImage = `url(https://www.artchitectours.es/wp-content/uploads/2019/01/Argentina-Puerto-Madero-004.jpg)`;
+      
+      // the first image (i === 0) should be handled differently because it should start at the very top.
+      // use function-based values in order to keep things responsive
+      gsap.fromTo(section.bg, {
+        backgroundPosition: () => i ? `50% ${-window.innerHeight * getRatio(section)}px` : "50% 0px"
+      }, {
+        backgroundPosition: () => `50% ${window.innerHeight * (1 - getRatio(section))}px`,
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: () => i ? "top bottom" : "top top", 
+          end: "bottom top",
+          scrub: true,
+          invalidateOnRefresh: true // to make it responsive
+        }
+    
+    
+      });
+    
+    });
+    
+
+
   return (
     <motion.div
       className="home-container"
@@ -249,9 +284,9 @@ function Home() {
           </>
         </div>
         <div className="home-first-container">
-          <h2 ref={titleHomeRef} className="invisible padding">Disfrutá los sabores de la alta pastelería</h2>
+          <h2 ref={titleHomeRef} className="padding">Disfrutá los sabores de la alta pastelería</h2>
           <div className="home-first-container-wa" ref={textWaHomeRef}>
-            <p className="home-first-text" ref={textHomeRef}>Escríbenos:</p>
+            <p className="home-first-text" ref={textHomeRef}>Escribinos:</p>
             <Wa />
           </div>
         </div>
@@ -292,6 +327,8 @@ function Home() {
         </div>
       </section>
 
+      
+
       <section className="home-container-fourthSection" ref={fourthSectionRef}>
         <div className="img-fourth-home-container fourth-section-img-text fadeIn"><img src="https://cdn.pixabay.com/photo/2015/02/17/15/33/wedding-cake-639516__340.jpg" className="crop" alt="torta de bodas" width="100%"></img></div>
         <h5 className="text-fourth-home fourth-section-img-text fadeIn">Pastelería para eventos</h5>
@@ -311,6 +348,12 @@ function Home() {
         <h5 className="text-seventh-home seventh-section-img-text fadeInSeventh">Decoración de pasteles</h5>
         <div className="img-seventh-home-container seventh-section-img-text fadeInSeventh"><img src="https://media.istockphoto.com/photos/flower-cake-picture-id157195431?k=20&m=157195431&s=612x612&w=0&h=wP5ITigdeCnihTnN_pJuPIpt8PfVGajezs69igzm-PM=" className="crop" alt="torta de bodas" width="100%"></img></div>
       </section>
+
+      <section className="sectionParallax">
+  <div className="bg"></div>
+  <h2>Te esperamos</h2>
+</section>
+
     </motion.div>
   )
 }

@@ -19,11 +19,10 @@ function NavBar() {
       }
       : {
         color: '#fff',
-
       }
 
   useEffect(() => {
-    //registrar el plugin, una sola vez, así:
+    //register Text Plugin
     gsap.registerPlugin(TextPlugin);
 
     gsap.to("h1", {
@@ -34,8 +33,6 @@ function NavBar() {
       },
       ease: "power2",
       repeat: 10,
-
-
     });
   }, [])
 
@@ -49,19 +46,15 @@ function NavBar() {
 
   return (
     <div className='navBar-container'>
-
       <NavLink to="/" className='nav-brand'>
         <RiCake3Line className='logo' />
         <h1></h1>
       </NavLink>
-
-
       <nav className='nav-menu'>
         <NavLink to="/" className="nav-links" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} style={styleLinks} >HOME</NavLink>
         <NavLink to="/about" className="nav-links" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} style={styleLinks}>NOSOTRAS</NavLink>
         <NavLink to="/menu" className="nav-links" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} style={styleLinks}>MENÚ</NavLink>
         <NavLink to="/contact" className="nav-links" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} style={styleLinks}>CONTACTO</NavLink>
-        
       </nav>
       <Wa className='wa-navbar' />
     </div>

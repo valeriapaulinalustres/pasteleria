@@ -6,9 +6,7 @@ import Wa from '../Wa/Wa';
 import { AiFillInstagram } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { TextPlugin } from 'gsap/TextPlugin.js';
-
-
-
+import {Flip} from 'gsap/Flip'
 
 function About() {
 
@@ -22,16 +20,14 @@ function About() {
   const chefIconTwoRef = useRef();
 
   //scroll
-  // Ref for our element
   const sectionRefAbout = useRef(null);
-  // All the ref to be observed
+
   const intersection = useIntersection(sectionRefAbout, {
     root: null,
     rootMargin: "0px",
     threshold: 0.5
   });
 
-  // Animation for fading in
   const fadeIn = element => {
     gsap.to(element, 1, {
       opacity: 1,
@@ -42,64 +38,49 @@ function About() {
         amount: 0.6
       }
     });
-
   };
-  // Animation for fading out
+
   const fadeOut = element => {
     gsap.to(element, 1, {
       opacity: 0,
       y: -20,
       ease: "power4.out",
-
     });
   };
 
-  // checking to see when the vieport is visible to the user
   intersection && intersection.intersectionRatio < 0.5
     ? fadeOut(".fadeIn")
     : fadeIn(".fadeIn");
 
 
-
-    //scroll change color of the text
-  
-  // All the ref to be observed
+  //scroll and change the color of the text
   const intersectionAboutText = useIntersection(aboutTextRef, {
     root: null,
     rootMargin: "0px",
     threshold: 0.8
   });
 
-  // Animation for fading in
   const fadeInAboutText = element => {
     gsap.to(element, 1, {
       color: "#ce2f56",
       ease: "power4.out",
       duration: 3,
-      
-    });
 
+    });
   };
-  // Animation for fading out
+
   const fadeOutAboutText = element => {
     gsap.to(element, 1, {
       color: "#444444",
       ease: "power4.out",
-
     });
   };
 
-  // checking to see when the vieport is visible to the user
   intersectionAboutText && intersectionAboutText.intersectionRatio < 0.8
     ? fadeOutAboutText(".paragraph")
     : fadeInAboutText(".paragraph");
 
-
-
-
-  //specific animation
-  
-
+  //specific animations
   const aboutImgOne = gsap.utils.selector(aboutImgOneRef);
   const aboutImgTwo = gsap.utils.selector(aboutImgTwoRef);
   const aboutText = gsap.utils.selector(aboutTextRef);
@@ -107,14 +88,11 @@ function About() {
   // store the timeline in a ref.
   const tl = useRef();
 
-  //chef photos:
-
+  //cheff photos:
   const onEnterChef = ({ currentTarget }) => {
     gsap.to(currentTarget, { scale: 1.3 });
-
     gsap.to(nameChefRef.current, { x: 20, y: 40, opacity: 1, delay: 0.3, duration: 2 });
     gsap.to(chefIconRef.current, { x: 70, y: 60, opacity: 1, delay: 0.5, duration: 1 });
-
   };
   const onEnterChefTwo = ({ currentTarget }) => {
     gsap.to(currentTarget, { scale: 1.3 });
@@ -125,7 +103,6 @@ function About() {
     gsap.to(currentTarget, { scale: 1, });
     gsap.to(nameChefRef.current, { x: -20, y: -40, opacity: 0, delay: 0.3, duration: 1, });
     gsap.to(chefIconRef.current, { x: 100, y: -60, opacity: 0, delay: 0.5, duration: 1 });
-
   };
   const onLeaveChefTwo = ({ currentTarget }) => {
     gsap.to(currentTarget, { scale: 1 });
@@ -137,28 +114,15 @@ function About() {
   //photos and description
   useEffect(() => {
     gsap.to(aboutTitle.current, { y: 80, duration: 3 });
-
-
     gsap.registerPlugin(TextPlugin);
-
-  
-
-    
     gsap.to(".welcome", {
-      duration:3 ,
+      duration: 3,
       text: {
         value: "Bienvenidos a Mi Pastelería",
-
         padSpace: true,
-
-
       },
       ease: "power2",
-      repeat:2,
-    
-
-
-
+      repeat: 2,
     });
 
     tl.current = gsap.timeline()
@@ -167,85 +131,60 @@ function About() {
         opacity: 1,
         scale: 1,
         delay: 0.5,
-      
         stagger: 1,
-
-
       })
       .to(aboutImgOne(".imgUp"), {
         duration: 2,
         opacity: 1,
         scale: 1,
         stagger: 0.5,
-      
-
       }, "-=1")
-
       .to(aboutText(".about-text"), {
         duration: 4,
         y: -20,
         stagger: 0.3,
         opacity: 1,
-
-
       }, "-=2.5")
-
       .to(aboutImgTwo(".imgFour"), {
         duration: 2,
         rotate: 360,
-
       }, "-=1")
-
-      
       .to(aboutText(".about-button"), {
         duration: 3,
         y: 310,
         scale: 3,
         opacity: 1,
-
-
-
       }, "-=3.5")
-
       .to(aboutImgOne(".imgOne"), {
         duration: 2,
         rotate: 360,
-
-      },)
-
+      })
       .to(aboutImgOne(".imgOne"), {
         duration: 2,
         rotate: 360,
-
-      },)
-
+      })
       .to(aboutImgOne(".imgTwo"), {
         duration: 2,
         rotate: 360,
-
-      },"-=1")
-
+      }, "-=1")
       .to(aboutImgTwo(".imgThree"), {
         duration: 2,
         rotate: 360,
-
-      },)
-
+      })
       .to(aboutImgTwo(".imgFour"), {
         duration: 2,
         rotate: 360,
-
-      },"-=1")
-
-.to(aboutText(".about-button"), {
+      }, "-=1")
+      .to(aboutText(".about-button"), {
         duration: 4,
-       rotate: 360,
-       repeat: 40,
-       delay:1,
-})
-
+        rotate: 360,
+        repeat: 40,
+        delay: 1,
+      })
   }, []);
 
+
+  
 
 
 
@@ -257,7 +196,6 @@ function About() {
       exit={{ opacity: 0 }}>
       <div className='subtitle-background'>
         <h2 ref={aboutTitle}>Nosotras</h2>
-
       </div>
 
       <section className='about-pastry'>
@@ -272,11 +210,8 @@ function About() {
           <p className='about-text paragraph'>Con más de 10 años de experiencia en el rubro, nos dedicamos a servir a empresas, eventos y clientes particulares. </p>
           <p className='about-text paragraph'>Elaboramos en forma casera los productos más famosos de la pastelería. </p>
           <div>
-         </div>
-        
-         <Wa />
-         
-          
+          </div>
+          <Wa />
         </div>
         <div className='about-cakes' ref={aboutImgTwoRef}>
           <img src="https://cdn.pixabay.com/photo/2022/04/07/20/34/sponge-cake-7118242__340.jpg" alt="torta de bodas" width="100%" className='about-image imgDown imgThree imgSix shadow' />
@@ -287,7 +222,6 @@ function About() {
       <section className='about-team ' ref={sectionRefAbout}>
         <h4 className='text-center fadeIn'>El equipo</h4>
         <h3 className='text-center fadeIn'>Nuestras pasteleras</h3>
-
         <div className='about-team-img'>
           <div className='container-img-chef fadeIn' onMouseEnter={onEnterChef} onMouseLeave={onLeaveChef} >
             <img src="https://media.istockphoto.com/photos/young-beautiful-smiling-woman-chef-with-arms-crossed-at-kitchen-picture-id1298088270?b=1&k=20&m=1298088270&s=170667a&w=0&h=uHmRibes_rtOLmzFECXfGxSgo_OzLbX2rl9PWNaU5AE=" alt="pastelera" className='crop' />
@@ -300,9 +234,8 @@ function About() {
             <div ref={chefIconTwoRef}><AiFillInstagram className='chef-icon' /></div>
           </div>
         </div>
-
-
       </section>
+     
     </motion.div>
   )
 }
