@@ -108,7 +108,7 @@ gsap.to(".envelope", {
     <div>
       <div className='subtitle-background'>
         <h2 ref={titleContact}>Contacto</h2>
-        <Logo />
+     
       </div>
       <div className='contact-container'>
         <div ref={textContact}>

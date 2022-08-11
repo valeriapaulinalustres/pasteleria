@@ -5,6 +5,7 @@ import { RiCake3Line } from 'react-icons/ri';
 import Wa from '../Wa/Wa';
 import { TextPlugin } from 'gsap/TextPlugin.js';
 import { gsap } from 'gsap';
+import Logo from "../Logo/Logo";
 
 function NavBar() {
 
@@ -47,7 +48,8 @@ function NavBar() {
   return (
     <div className='navBar-container'>
       <NavLink to="/" className='nav-brand'>
-        <RiCake3Line className='logo' />
+       
+        <Logo />
         <h1></h1>
       </NavLink>
       <nav className='nav-menu'>
@@ -62,3 +64,7 @@ function NavBar() {
 }
 
 export default NavBar
+
+/*
+ <RiCake3Line className='logo' />
+ */

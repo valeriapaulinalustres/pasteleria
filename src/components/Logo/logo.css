@@ -1,8 +1,7 @@
 .logo-pasteleria {
     content: url(/public/logo.png);
-    width: 250px;
-    margin-top: 3%;
-    margin-bottom: 2%;
+    width: 180px;
+   margin: 10px;
     align-self: center;
 }
 

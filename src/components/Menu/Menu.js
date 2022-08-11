@@ -116,10 +116,10 @@ function Menu() {
   }, [])
 
   return (
-    <div>
+    <div className='top'>
       <div className='subtitle-background'>
         <h2 ref={menuRef}>Nuestras delicias:</h2>
-        <Logo />
+   
       </div>
       <div className='menu-container' ref={imgContainerRef}>
         {products.map((item, index) => (

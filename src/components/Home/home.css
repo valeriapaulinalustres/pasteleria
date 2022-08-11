@@ -46,6 +46,7 @@ img {
   justify-content: center;
   align-items: center;
   margin-right: 30px;
+  width: 50%;
 
 }
 
@@ -70,10 +71,15 @@ img {
 .home-container-FirstSection {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
+padding: 20px 40px;
+  margin-top: 200px;
+}
+
+.slogan{
+  padding-top: 180px;
+  font-size: 50px;
 }
 
 .home-container-SecondSection {
@@ -494,6 +500,16 @@ margin: 0;
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  .carousel-container{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
 }
 @media only screen and (max-width:980px) {
 .text-fourth-home{

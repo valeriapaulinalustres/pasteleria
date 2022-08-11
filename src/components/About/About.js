@@ -191,9 +191,10 @@ function About() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}>
+
       <div className='subtitle-background'>
         <h2 ref={aboutTitle}>Nosotras</h2>
-       <Logo />
+    
       </div>
 
       <section className='about-pastry'>
@@ -227,12 +228,13 @@ function About() {
             <div ref={chefIconRef}><AiFillInstagram className='chef-icon' /></div>
           </div>
           <div className='container-img-chef fadeIn' onMouseEnter={onEnterChefTwo} onMouseLeave={onLeaveChefTwo}>
-            <img src="https://media.istockphoto.com/photos/woman-decorating-the-pink-cake-she-has-prepared-picture-id1343850183?b=1&k=20&m=1343850183&s=170667a&w=0&h=x73Rp7WXxL6hcT7Gb6iKGm67t2xB-TpCzIPCm84lc-M=" alt="pastelera" className='crop' />
+            <img src="https://media.istockphoto.com/photos/woman-decorating-the-pink-cake-she-has-prepared-picture-id1343850183?b=1&k=20&m=1343850183&s=170667a&w=0&h=x73Rp7WXxL6hcT7Gb6iKGm67t2xB-TpCzIPCm84lc-M=" alt="pastelera" className='crop'  />
             <h4 className='name-chef' ref={nameChefTwoRef}>Gabriela</h4>
             <div ref={chefIconTwoRef}><AiFillInstagram className='chef-icon' /></div>
           </div>
         </div>
       </section>
+      
       <Logo />
     </motion.div>
   )

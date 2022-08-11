@@ -50,7 +50,7 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 
 }
 
@@ -61,6 +61,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 150px;
 
 }
 
@@ -90,7 +91,7 @@
     margin: 20px;
     border-radius: 10px;
 
-box-shadow:  10px 10px 10px 10px #d9d9d9,
+box-shadow:  3px 3px 3px 3px #d9d9d9,
              5px 5px 5px  #ffffff;
    
 }
@@ -98,7 +99,7 @@ box-shadow:  10px 10px 10px 10px #d9d9d9,
     position:absolute;
     left: -100%;
     right: -100%;
-    top: -100%;
+    top: 0%;
     bottom: -100%;
     margin: auto;
     min-height: 100%;
@@ -127,6 +128,7 @@ box-shadow:  10px 10px 10px 10px #d9d9d9,
     border-radius: 10px;
 
 }
+
 
 
 

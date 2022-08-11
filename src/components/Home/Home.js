@@ -14,6 +14,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 import { useIntersection } from "react-use";
 import CSSPlugin from "gsap/CSSPlugin";
 import Logo from "../Logo/Logo";
+import Carousel from "../Carousel/Carousel"
 
 
 function Home() {
@@ -272,21 +273,12 @@ function Home() {
       exit={{ opacity: 0 }}
     >
       <section className='main home-container-FirstSection'>
-        <div className="container" ref={el => (container = el)}>
-          <>
-            <div className="img-container">
-              <img
-                ref={el => {
-                  image = el;
-                }}
-                src="https://cdn.pixabay.com/photo/2017/09/14/14/33/cupcake-2749204__340.jpg"
-              />
-            </div>
-          </>
-        </div>
+        
+
+        <Carousel className="carousel-container"/>
         <div className="home-first-container">
-          <h2 ref={titleHomeRef} className="padding">Disfrutá los sabores de la alta pastelería</h2>
-          <Logo />
+ 
+          <h2 ref={titleHomeRef} className="padding slogan">Disfrutá los sabores de la alta pastelería</h2>
           <div className="home-first-container-wa" ref={textWaHomeRef}>
             <p className="home-first-text" ref={textHomeRef}>Escribinos:</p>
             <Wa />
@@ -361,3 +353,22 @@ function Home() {
 }
 
 export default Home
+
+
+
+/*
+div de la imagen que aparece. La animación está arriba
+
+<div className="container" ref={el => (container = el)}>
+          <>
+            <div className="img-container">
+              <img
+                ref={el => {
+                  image = el;
+                }}
+                src="https://cdn.pixabay.com/photo/2017/09/14/14/33/cupcake-2749204__340.jpg"
+              />
+            </div>
+          </>
+        </div>
+        */
