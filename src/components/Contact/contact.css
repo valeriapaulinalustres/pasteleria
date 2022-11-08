@@ -94,7 +94,7 @@ box-shadow:  11px 11px 22px #dbdbdb,
         width: 300px;
         height: 300px;
     }
-   
-
-
+   .envelope{
+    display: none;
+   }
 }

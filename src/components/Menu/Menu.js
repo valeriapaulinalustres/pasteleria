@@ -118,7 +118,7 @@ function Menu() {
   return (
     <div className='top'>
       <div className='subtitle-background'>
-        <h2 ref={menuRef}>Nuestras delicias:</h2>
+        <h2 ref={menuRef}>Nuestras delicias</h2>
    
       </div>
       <div className='menu-container' ref={imgContainerRef}>

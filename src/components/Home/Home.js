@@ -241,8 +241,9 @@ function Home() {
       section.bg = section.querySelector(".bg"); 
     
       // Give the backgrounds some random images
-      section.bg.style.backgroundImage = `url(https://www.artchitectours.es/wp-content/uploads/2019/01/Argentina-Puerto-Madero-004.jpg)`;
+      section.bg.style.backgroundImage = `url(https://www.buenosaires.gob.ar/sites/gcaba/files/al_avenida_9_dejulio.jpg)`;
       
+      //https://www.artchitectours.es/wp-content/uploads/2019/01/Argentina-Puerto-Madero-004.jpg
       // the first image (i === 0) should be handled differently because it should start at the very top.
       // use function-based values in order to keep things responsive
       gsap.fromTo(section.bg, {

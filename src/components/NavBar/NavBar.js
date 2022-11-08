@@ -48,7 +48,7 @@ function NavBar() {
   return (
     <div className='navBar-container'>
       <NavLink to="/" className='nav-brand'>
-       
+
         <Logo />
         <h1></h1>
       </NavLink>
