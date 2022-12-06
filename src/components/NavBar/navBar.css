@@ -1,5 +1,5 @@
 .navBar-container{
-    background-color: green;
+    background-color: var(--gris);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,6 +33,11 @@
 }
 .nav-menu{
     margin: 5px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -69,13 +74,10 @@
     flex-direction: column;
 }
 .nav-menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    
 }
 .nav-menu{
     margin: 0;

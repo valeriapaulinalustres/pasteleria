@@ -5,7 +5,7 @@ import './logo.css'
 function Logo() {
     const logoRef = useRef();
     useEffect(() => {
-        gsap.to(logoRef.current, { rotate: 360, duration: 3, repeat: 300});
+        gsap.to(logoRef.current, { rotate: 360, duration: 5, repeat: 300});
     }, [])
     
   return (

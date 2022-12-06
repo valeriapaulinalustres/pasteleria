@@ -276,15 +276,15 @@ function Home() {
       <section className='main home-container-FirstSection'>
         
 
-        <Carousel className="carousel-container"/>
+       
         <div className="home-first-container">
  
-          <h2 ref={titleHomeRef} className="padding slogan">Disfrutá los sabores de la alta pastelería</h2>
+          <h2 ref={titleHomeRef} className="padding slogan">Disfruta los sabores de la alta pastelería</h2>
           <div className="home-first-container-wa" ref={textWaHomeRef}>
-            <p className="home-first-text" ref={textHomeRef}>Escribinos:</p>
-            <Wa />
+          <a href="https://wa.me/5491160127926/?text=Hola%20Mi%20Pastelería" target="_blank" ><p className="home-first-text" ref={textHomeRef}>Escríbenos</p></a>          
           </div>
         </div>
+        <Carousel className="carousel-container"/>
       </section>
 
       <section className="home-container-SecondSection" ref={secondSectionRef}>
@@ -348,7 +348,7 @@ function Home() {
   <div className="bg"></div>
   <h2>Te esperamos</h2>
 </section>
-<Logo />
+
     </motion.div>
   )
 }
